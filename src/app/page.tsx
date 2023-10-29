@@ -1,6 +1,8 @@
+'use client'
+import { translateText } from "@/api/translate";
+import TranslationButton from "@/components/TranslationButton";
 import TranslationInput from "@/components/TranslationInput";
 import TranslationResult from "@/components/TranslationResult";
-import { BsTranslate } from "react-icons/bs";
 
 export default function Home() {
   return (
@@ -13,9 +15,7 @@ export default function Home() {
 
       <section className="flex w-full max-w-5xl justify-evenly items-center gap-4 border border-gray-300 rounded-xl p-10 mt-4">
         <TranslationInput />
-        <button className="flex justify-center items-center w-[60px] h-[60px] border-[1px] rounded-full">
-          <BsTranslate size={35} />
-        </button>
+        <TranslationButton onClick={() => {translateText("hola mundo")}} />
         <TranslationResult />
       </section>
     </main>
