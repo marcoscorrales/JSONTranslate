@@ -19,7 +19,6 @@ export const translateText = async (text: string): Promise<string> => {
 
     try {
         const response = await axios.request(options);
-        console.log(response.data.data.translatedText);
         return (response.data.data.translatedText);
     } catch (error) {
         console.error(error);
