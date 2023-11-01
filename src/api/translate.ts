@@ -1,9 +1,18 @@
 const axios = require('axios');
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
-export const translateText = async (text: string): Promise<string> => {
+const showError = () => {
+    toast.error('Something went wrong', {
+      position: 'top-center',
+      autoClose: 3000, // Duración de la notificación en milisegundos
+    });
+  };
+
+export const translateText = async (text: string, languageSource: string, languageTarget: string): Promise<string> => {
     const encodedParams = new URLSearchParams();
-    encodedParams.set('source_language', 'es');
-    encodedParams.set('target_language', 'en');
+    encodedParams.set('source_language', languageSource.toLocaleLowerCase());
+    encodedParams.set('target_language', languageTarget.toLocaleLowerCase());
     encodedParams.set('text', text);
 
     const options = {
@@ -19,10 +28,10 @@ export const translateText = async (text: string): Promise<string> => {
 
     try {
         const response = await axios.request(options);
+        console.log(response)
         return (response.data.data.translatedText);
     } catch (error) {
-        console.error(error);
-        console.log(process.env.RAPIDAPI_KEY)
+        showError();
         return '';
     }
 }
