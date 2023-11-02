@@ -3,7 +3,7 @@ import { GeistSans, GeistMono } from 'geist/font'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'JSON Translate',
+  title: 'JSON translator',
   description: 'Translate JSON files and code with ease',
 }
 

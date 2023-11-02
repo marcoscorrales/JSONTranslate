@@ -35,16 +35,16 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center justify-center p-24 max-[675px]:p-2">
       <ToastContainer />
       <div className="flex justify-between w-full max-w-5xl">
-        <div className="flex z-10 max-w-5xl w-full items-center gap-3 font-mono text-sm">
+        <div className="flex z-10 max-w-5xl w-full items-center gap-3 text-sm">
           <Image src={logo} alt="logo" className="w-14 h-14" />
           <p className="flex w-auto justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 p-4 backdrop-blur-2xl rounded-xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit static border bg-gray-200 lg:dark:bg-zinc-800/30">
-            <code className="font-mono font-bold">JSON translate</code>
+            <code className="font-bold">JSON translator</code>
           </p>
         </div>
         <p className="flex w-auto justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 p-2 backdrop-blur-2xl rounded-xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit static border bg-gray-200 lg:dark:bg-zinc-800/30">
-          <a href="https://github.com/marcoscorrales/JSONTranslate" className="flex items-center gap-2">
+          <a href="https://github.com/marcoscorrales/JSONTranslate" target="_blank" className="flex items-center gap-2">
             <BsGithub size={25} />
-            <code className="font-mono font-bold whitespace-nowrap max-[400px]:hidden">
+            <code className="font-bold whitespace-nowrap max-[400px]:hidden">
               Star on github
             </code>
           </a>
